@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Import materialize.css-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <title>Find some friends</title>
+
+</head> 
+
+<body>
+    <div class="container">
+        <div class="card-panel" id="main_card">
+            <h1 class="center"><i class="medium material-icons">person_add</i>Friend Finder</h1>
+            <h4 class="center">Take the survey to see who you are compatable with!</h4>
+        </div>
+        <div class="card z-depth-1" id="signin">
+            <div class="card-content black-text"><span class="card-title center">Survey</span>
+                <form class="black-text">
+                    <div class="input-field col m5">
+                        <input id="name" type="text" class="validate" required>
+                        <label for="name"> Name: </label>
+                    </div>
+                    <div class="input-field col m5">
+                        <input id="picture" type="text" class="validate" required>
+                        <label for="picture"> Picture: </label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select id="question1" required>
+                            <option value="" disabled selected>How likely are you to choose a new item on a menu?</option>
+                            <option value="1">1 (not likely at all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (very likely)</option>
+                        </select>
+                    </div>   
+                    <div class="input-field col s12">
+                        <select id="question2" required>
+                            <option value="" disabled selected>How likely are you to choose a new item on a menu?</option>
+                            <option value="1">1 (not likely at all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (very likely)</option>
+                        </select>
+                    </div> 
+                    <div class="input-field col s12">
+                        <select id="question3" required>
+                            <option value="" disabled selected>How easy is it for you to make new friends?</option>
+                            <option value="1">1 (not easy at all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (very easy)</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <select id="question4" required>
+                            <option value="" disabled selected>How often do you get so lost in thoughts that you ignore or forget your surroundings?</option>
+                            <option value="1">1 (not often at all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (very often)</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <select id="question5">
+                            <option value="" disabled selected>How often do you do something just out of sheer curiosity?</option>
+                            <option value="1">1 (not often at all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (very often)</option>
+                        </select>
+                    </div>     
+                    <div class="input-field col s12">
+                        <select id="question6">
+                            <option value="" disabled selected>Are you a rule follower?</option>
+                            <option value="1">1 (not at all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (with everything)</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <select id="question7">
+                            <option value="" disabled selected>Do you get irritated easily?</option>
+                            <option value="1">1 (not often at all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (very often)</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <select id="question8">
+                            <option value="" disabled selected>How often do you listen to music?</option>
+                            <option value="1">1 (not often at all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (very often)</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <select id="question9">
+                            <option value="" disabled selected>Are making decisions difficult for you?</option>
+                            <option value="1">1 (not hard at all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (very hard)</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <select id="question10">
+                            <option value="" disabled selected>How optimisitic are you?</option>
+                            <option value="1">1 (pessimistic)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (very optimisitic)</option>
+                        </select>
+                    </div>
+                    <button class="btn waves-effect waves-light" id="submit">Submit<i class="material-icons right">done_all</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Your Match is...</h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('select').formSelect();
+            
+            console.log("here");
+            $("#submit").on("click", function(event) {
+                
+                event.preventDefault();
+                console.log("clicked");
+                
+                //     var instance = M.FormSelect.getInstance(this);
+                //     var selectedValue = instance.getSelectedValues();
+                //     console.log(selectedValue);
+                // });
+                
+                var newPerson = {
+                    name: $("#name").val(),
+                    photo: $("#picture").val(),
+                    answers: [
+                        $('#question1 option:selected').val(),
+                        $('#question2 option:selected').val(),
+                        $('#question3 option:selected').val(),
+                        $('#question4 option:selected').val(),
+                        $('#question5 option:selected').val(),
+                        $('#question6 option:selected').val(),
+                        $('#question7 option:selected').val(),
+                        $('#question8 option:selected').val(),
+                        $('#question9 option:selected').val(),
+                        $('#question10 option:selected').val()
+                    ] 
+                };
+                console.log(newPerson);
+                $.post("/api/friends", newPerson, function(response){
+                    console.log(response);
+                    alert('Your match is:' + response.matchedFriend.name);
+                });
+            
+        });
+    });
+    </script>
+</body>
+</html>
